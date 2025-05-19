@@ -66,7 +66,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // Hilt dependencies
-    implementation("com.google.dagger:hilt-android:2.51.1")
+    implementation("com.google.dagger:hilt-android:2.56.1")
     kapt("com.google.dagger:hilt-android-compiler:2.51.1")
     kapt("androidx.hilt:hilt-compiler:1.2.0")
     //hilt navigation-compose
@@ -76,11 +76,10 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended-android:1.7.8")
 
     // NavGraph dependency
-    implementation("androidx.navigation:navigation-compose:2.8.7")
+    implementation("androidx.navigation:navigation-compose:2.9.0")
     
     // Serialization dependency
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
-
     // runtime permission dependency
     implementation("com.google.accompanist:accompanist-permissions:0.36.0")
 
@@ -91,14 +90,15 @@ dependencies {
 
 
     // Exo-Player dependency
-    implementation("androidx.media3:media3-exoplayer:1.5.1")
-    implementation("androidx.media3:media3-ui:1.5.1")
+    implementation("androidx.media3:media3-exoplayer:1.7.1")
+    implementation("androidx.media3:media3-ui:1.7.1")
     implementation("androidx.media3:media3-common:1.5.1")
 
+
     // Jetpack Compose
-    implementation("androidx.compose.ui:ui:1.7.8")
-    implementation("androidx.compose.material:material:1.7.8")
-    implementation("androidx.compose.ui:ui-tooling:1.7.8")
+    implementation("androidx.compose.ui:ui:1.8.1")
+    implementation("androidx.compose.material:material:1.8.1")
+    implementation("androidx.compose.ui:ui-tooling:1.8.1")
     // ExoPlayer
     implementation("com.google.android.exoplayer:exoplayer:2.19.1")
 

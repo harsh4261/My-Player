@@ -5,8 +5,8 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.videoplayer.data_layer.Repo.MusicAppRepoImpl
-import com.example.videoplayer.data_layer.Repo.VideoAppRepoImpl
+import com.example.videoplayer.data_layer.RepoImpl.MusicAppRepoImpl
+import com.example.videoplayer.data_layer.RepoImpl.VideoAppRepoImpl
 import com.example.videoplayer.data_layer.models.Song
 import com.example.videoplayer.data_layer.models.VideoFile
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -20,7 +20,7 @@ class ViewModel @Inject constructor(
     val videoRepo: VideoAppRepoImpl,
     val musicRepo: MusicAppRepoImpl,
     val application: Application
-) : ViewModel() {
+) :  ViewModel() {
 
     val showUi = MutableStateFlow(false)
 

@@ -7,8 +7,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.videoplayer.presentation_layer.Screens.PlayerScreen
-import com.example.videoplayer.presentation_layer.Screens.SongListScreen
+import com.example.videoplayer.presentation_layer.Screens.Songs.PlayerScreenUi
+import com.example.videoplayer.presentation_layer.Screens.Songs.SongListScreenUi
 
 @Composable
 fun MusicNavigation(
@@ -19,17 +19,17 @@ fun MusicNavigation(
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "song_list") {
         composable("song_list") {
-            showBottomBar.value = true // ✅ Show BottomBar on M_Page1
-            SongListScreen(navController=navController,modifier = modifier) // Pass mediaPlayer here
+            showBottomBar.value = true
+            SongListScreenUi(navController=navController, modifier = modifier )
         }
         composable("player/{title}/{artist}/{duration}/{filePath}/{index}") { backStackEntry ->
-            showBottomBar.value = false // ❌ Hide BottomBar on M_Page2
+            showBottomBar.value = false
             val title = backStackEntry.arguments?.getString("title") ?: ""
             val artist = backStackEntry.arguments?.getString("artist") ?: ""
             val duration = backStackEntry.arguments?.getString("duration") ?: ""
             val filePath = backStackEntry.arguments?.getString("filePath") ?: ""
             val index = backStackEntry.arguments?.getString("index")?.toInt() ?: 0
-            PlayerScreen(
+            PlayerScreenUi(
                 navController = navController,
                 mediaPlayer = mediaPlayer,
                 title = title,

@@ -1,7 +1,7 @@
 package com.example.videoplayer.di
 
-import com.example.videoplayer.data_layer.Repo.MusicAppRepoImpl
-import com.example.videoplayer.data_layer.Repo.VideoAppRepoImpl
+import com.example.videoplayer.data_layer.RepoImpl.MusicAppRepoImpl
+import com.example.videoplayer.data_layer.RepoImpl.VideoAppRepoImpl
 import com.example.videoplayer.domain_layer.Repo.MusicAppRepo
 import com.example.videoplayer.domain_layer.Repo.VideoAppRepo
 import dagger.Module

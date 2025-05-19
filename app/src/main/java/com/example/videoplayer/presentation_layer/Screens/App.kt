@@ -59,8 +59,9 @@ fun App(
     } else {
         Box(
             modifier = Modifier
-                .fillMaxSize(),
-            contentAlignment = Alignment.Center
+                .fillMaxSize()
+                .padding(bottom = 50.dp),
+            contentAlignment = Alignment.BottomCenter
         ) {
             Text(
                 text = "Something wrong!",
@@ -69,6 +70,7 @@ fun App(
                     fontWeight = FontWeight.Bold,
                     color = if (isSystemInDarkTheme()) Color.White else Color.Black
                 )
+
             )
         }
     }
